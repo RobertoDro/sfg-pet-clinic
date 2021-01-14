@@ -1,5 +1,8 @@
+guru\springframework\sfgpetclinic\model\Visit.class
 guru\springframework\sfgpetclinic\service\map\VetServiceMap.class
 guru\springframework\sfgpetclinic\service\map\PetServiceMap.class
+guru\springframework\sfgpetclinic\service\PetTypeService.class
+guru\springframework\sfgpetclinic\service\map\PetTypeMapService.class
 guru\springframework\sfgpetclinic\service\VetService.class
 guru\springframework\sfgpetclinic\service\map\OwnerServiceMap.class
 guru\springframework\sfgpetclinic\service\OwnerService.class
@@ -9,6 +12,9 @@ guru\springframework\sfgpetclinic\model\Owner.class
 guru\springframework\sfgpetclinic\service\CrudService.class
 guru\springframework\sfgpetclinic\service\map\AbstractMapService.class
 guru\springframework\sfgpetclinic\service\PetService.class
+guru\springframework\sfgpetclinic\model\Specialty.class
+guru\springframework\sfgpetclinic\service\SpecialtyService.class
 guru\springframework\sfgpetclinic\model\PetType.class
+guru\springframework\sfgpetclinic\service\map\SpecialityMapService.class
 guru\springframework\sfgpetclinic\model\Pet.class
 guru\springframework\sfgpetclinic\model\Vet.class
