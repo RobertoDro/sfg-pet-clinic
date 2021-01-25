@@ -10,7 +10,7 @@ import java.util.Set;
 @Entity
 @Setter
 @Getter
-@Builder
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "owners")
