@@ -23,8 +23,8 @@ public class OwnerController {
     }
 
     @InitBinder
-    public void setAllowedFields(WebDataBinder dataBinder){
-        dataBinder.setAllowedFields("id");
+    public void setAllowedFields(WebDataBinder dataBinder) {
+        dataBinder.setDisallowedFields("id");
     }
 
 
@@ -65,6 +65,7 @@ public class OwnerController {
         mav.addObject(ownerService.findById(ownerId));
         return mav;
     }
+
     @GetMapping("/new")
     public String initCreationForm(Model model) {
         model.addAttribute("owner", Owner.builder().build());
@@ -72,7 +73,7 @@ public class OwnerController {
     }
 
     @PostMapping("/new")
-    public String processCreationForm( Owner owner, BindingResult result) {
+    public String processCreationForm(@Valid Owner owner, BindingResult result) {
         if (result.hasErrors()) {
             return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
         } else {
@@ -88,7 +89,7 @@ public class OwnerController {
     }
 
     @PostMapping("/{ownerId}/edit")
-    public String processUpdateOwnerForm( Owner owner, BindingResult result, @PathVariable Long ownerId) {
+    public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result, @PathVariable Long ownerId) {
         if (result.hasErrors()) {
             return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
         } else {
@@ -97,6 +98,5 @@ public class OwnerController {
             return "redirect:/owners/" + savedOwner.getId();
         }
     }
-
 
 }
