@@ -23,7 +23,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(MockitoExtension.class)
-class OwnerControlerTest {
+class OwnerControllerTest {
 
     @Mock
     OwnerService ownerService;
@@ -54,12 +54,12 @@ class OwnerControlerTest {
                 .andExpect(model().attribute("owners", hasSize(2)));
     }
 
-    @Test
-    void findOwners() throws Exception {
-        mockMvc.perform(get("/owners/find"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("notimplemented"));
-
-        verifyZeroInteractions(ownerService);
-    }
+//    @Test
+//    void findOwners() throws Exception {
+//        mockMvc.perform(get("/owners/find"))
+//                .andExpect(status().isOk())
+//                .andExpect(view().name("notimplemented"));
+//
+//        verifyZeroInteractions(ownerService);
+//    }
 }
