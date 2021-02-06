@@ -29,7 +29,7 @@ class OwnerControlerTest {
     OwnerService ownerService;
 
     @InjectMocks
-    OwnerControler controler;
+    OwnerController controler;
 
     Set<Owner> owners;
 
